@@ -1,0 +1,16 @@
+{
+	"name": "Elite_Remote",
+	"image": "assets/profile.png",
+	"tags": [
+		"Luau",
+		"DataStore Systems",
+		"Procedural Generation",
+		"Server Authority",
+		"UI Scripting"
+	],
+	"description": "Roblox scripter focused on the systems that have to not break: player data that survives a crash, worlds generated from a seed, and gameplay the client can't lie about.\n\nI work in modular Luau with a clear server and client split, and I write code other people can pick up and extend.",
+	"contact": {
+		"email": "eliteremote12@gmail.com",
+		"discord": "https://discord.com/users/1162845700980228147"
+	}
+}
