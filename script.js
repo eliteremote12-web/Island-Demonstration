@@ -98,7 +98,8 @@ function openModal(project) {
 		modalText.appendChild(p)
 	}
 
-	if (project.game) modalLinks.appendChild(makeLink(project.game, "Play on Roblox", true))
+	if (project.game) modalLinks.appendChild(makeLink(project.game, "Play on Roblox"))
+	if (project.video) modalLinks.appendChild(makeLink(project.video, "Watch on YouTube"))
 
 	if (project.download) {
 		const link = document.createElement("a")
