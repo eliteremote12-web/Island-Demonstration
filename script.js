@@ -99,7 +99,15 @@ function openModal(project) {
 	}
 
 	if (project.game) modalLinks.appendChild(makeLink(project.game, "Play on Roblox", true))
-	if (project.repo) modalLinks.appendChild(makeLink(project.repo, "View code"))
+
+	if (project.download) {
+		const link = document.createElement("a")
+		link.className = "btn"
+		link.href = project.download
+		link.textContent = "Download place file"
+		link.setAttribute("download", "")
+		modalLinks.appendChild(link)
+	}
 
 	modal.hidden = false
 	document.body.style.overflow = "hidden"
