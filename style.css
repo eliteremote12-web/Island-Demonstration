@@ -58,6 +58,24 @@ a {
 	margin: 0 auto;
 }
 
+.avatar {
+	width: 86px;
+	height: 86px;
+	border-radius: 50%;
+	object-fit: cover;
+	border: 2px solid var(--line);
+	margin-bottom: 24px;
+	display: block;
+}
+
+.hero-tags {
+	margin-bottom: 22px;
+}
+
+.tagline p {
+	margin: 0 0 12px;
+}
+
 .eyebrow {
 	font-family: var(--font-display);
 	font-size: 0.78rem;
@@ -83,7 +101,12 @@ a {
 .hero-links {
 	display: flex;
 	flex-wrap: wrap;
+	align-items: center;
 	gap: 12px;
+}
+
+.hero-links span {
+	display: contents;
 }
 
 .btn {
