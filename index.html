@@ -1,11 +1,71 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<meta charset="utf-8">
-	<title>Your Name | Roblox Scripter</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Your Name — Roblox Scripter</title>
+<meta name="description" content="Roblox scripting portfolio: data systems, procedural generation, and server-authoritative gameplay.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<h1>Your Name</h1>
-	<p>Roblox scripter focused on data systems and procedural generation.</p>
+
+<header class="hero">
+	<div class="hero-inner">
+		<p class="eyebrow">Roblox Studio &middot; Luau</p>
+		<h1>Your Name</h1>
+		<p class="tagline">
+			I build the systems that have to not break: player data that survives a crash,
+			worlds generated from a seed, and gameplay the client can't lie about.
+		</p>
+		<div class="hero-links">
+			<a class="btn btn-primary" href="#work">See the work</a>
+			<a class="btn" href="https://github.com/eliteremote12-web" target="_blank" rel="noopener">GitHub</a>
+			<a class="btn" href="mailto:you@example.com">Contact</a>
+		</div>
+	</div>
+	<div class="hero-fade"></div>
+</header>
+
+<main>
+	<section id="work" class="work">
+		<div class="section-head">
+			<h2>Selected projects</h2>
+			<p>Click any card to open the breakdown.</p>
+		</div>
+
+		<div id="timeline" class="timeline">
+			<div class="spine" aria-hidden="true"></div>
+			<p class="loading" id="loading">Loading projects&hellip;</p>
+		</div>
+	</section>
+</main>
+
+<footer class="footer">
+	<p>Built with static HTML, CSS and JavaScript. Hosted on GitHub Pages.</p>
+	<p class="footer-meta"><span id="year"></span> &middot; Your Name</p>
+</footer>
+
+<div class="modal" id="modal" hidden>
+	<div class="modal-backdrop" data-close></div>
+
+	<div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+		<button class="modal-close" type="button" data-close aria-label="Close">&times;</button>
+
+		<div class="modal-media" id="modal-media"></div>
+
+		<div class="modal-body">
+			<p class="modal-eyebrow" id="modal-eyebrow"></p>
+			<h3 id="modal-title"></h3>
+			<div class="modal-tags" id="modal-tags"></div>
+			<div class="modal-text" id="modal-text"></div>
+			<div class="modal-links" id="modal-links"></div>
+		</div>
+	</div>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
