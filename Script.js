@@ -173,7 +173,7 @@ const observer = new IntersectionObserver(
 	{ threshold: 0.15 }
 )
 
-fetch("data/projects.json")
+fetch("projects.json")
 	.then(response => {
 		if (!response.ok) throw new Error(response.status)
 		return response.json()
@@ -188,7 +188,7 @@ fetch("data/projects.json")
 		}
 	})
 	.catch(error => {
-		loading.textContent = "Could not load projects. Check data/projects.json."
+		loading.textContent = "Could not load projects. Check that projects.json sits next to index.html."
 		console.error(error)
 	})
 
