@@ -170,6 +170,71 @@ function makeCard(project) {
 	return node
 }
 
+const contactLabels = {
+	email: "Email",
+	discord: "Discord",
+	github: "GitHub",
+	youtube: "YouTube",
+	roblox: "Roblox",
+}
+
+function contactHref(key, value) {
+	if (key === "email" && !value.startsWith("mailto:")) return `mailto:${value}`
+	return value
+}
+
+function renderScripter(data) {
+	const avatar = document.getElementById("avatar")
+	const tags = document.getElementById("scripter-tags")
+	const description = document.getElementById("scripter-description")
+	const contact = document.getElementById("scripter-contact")
+
+	document.getElementById("scripter-name").textContent = data.name || ""
+	document.getElementById("footer-name").textContent = data.name || ""
+
+	if (data.name) document.title = `${data.name} — Roblox Scripter`
+
+	if (data.image) {
+		avatar.src = data.image
+		avatar.alt = data.name || ""
+		avatar.hidden = false
+	}
+
+	for (const tag of data.tags || []) {
+		tags.appendChild(makeTag(tag))
+	}
+
+	for (const text of String(data.description || "").split(/\n\s*\n/)) {
+		if (!text.trim()) continue
+		const p = document.createElement("p")
+		p.textContent = text.trim()
+		description.appendChild(p)
+	}
+
+	for (const [key, value] of Object.entries(data.contact || {})) {
+		if (!value) continue
+
+		const label = contactLabels[key] || key
+		const link = makeLink(contactHref(key, value), label)
+
+		if (key === "email") {
+			link.target = ""
+			link.rel = ""
+			link.textContent = value
+		}
+
+		contact.appendChild(link)
+	}
+}
+
+fetch("scripter.json")
+	.then(response => {
+		if (!response.ok) throw new Error(response.status)
+		return response.json()
+	})
+	.then(renderScripter)
+	.catch(error => console.error(error))
+
 const observer = new IntersectionObserver(
 	entries => {
 		for (const entry of entries) {
