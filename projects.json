@@ -2,13 +2,13 @@
 	{
 		"title": "Island Demonstration",
 		"summary": "Seeded Perlin island generation with a full save and load system.",
-		"thumbnail": "assets/island.png",
+		"thumbnail": "assets/islanddemo.png",
 		"video": "https://youtu.be/REPLACE_ID",
-		"game": "https://www.roblox.com/games/0000000000/Island-Demonstration",
-		"repo": "https://github.com/eliteremote12-web/Island-Demonstration",
+		"game": "https://www.roblox.com/games/100967107962677/Island-Demonstrationn",
+		"download": "assets/islanddemo.rbxl",
 		"role": "Solo project",
 		"tags": ["Procedural Generation", "DataStore", "Luau"],
-		"description": "Players start in a menu with no character loaded. They can create a new world, which picks a random seed and generates a 250x250 island out of 5x5 blocks, or load one they saved earlier.\n\nTerrain height comes from layered Perlin noise multiplied by a radial falloff, so the island sinks below sea level at the edges. Block type is chosen by height: sand near the water, then grass, stone and snow, with dirt filling the layers underneath.\n\nEvery block is serialized as type and grid position, then written to a DataStore on player leave and on BindToClose. DataStore calls retry with exponential backoff, saves are versioned for future schema migrations, and a busy flag stops a second world loading on top of the first."
+		"description": "Players start by facing a UI that prompts them to play. When they click play, they are prompted to either create a world, or load an existing one. Once they make there selection, an algorithm for generating an island runs. When the player leaves, there world data is saved. When they load back in, they can load in the previous world."
 	},
 	{
 		"title": "Second Project",
@@ -16,7 +16,7 @@
 		"thumbnail": "assets/placeholder.png",
 		"video": "",
 		"game": "",
-		"repo": "",
+		"download": "",
 		"role": "Solo project",
 		"tags": ["Tag One", "Tag Two"],
 		"description": "First paragraph: the problem you were solving.\n\nSecond paragraph: how you approached it and what the interesting technical decision was.\n\nThird paragraph: the trade-off you made, and what you would do with more time."
