@@ -14,17 +14,16 @@
 
 <header class="hero">
 	<div class="hero-inner">
+		<img class="avatar" id="avatar" alt="" hidden>
+
 		<p class="eyebrow">Roblox Studio &middot; Luau</p>
-		<h1>Elite_Remote</h1>
-		<p class="tagline">
-			I build the systems that have to not break: player data that survives a crash,
-			worlds generated from a seed, and gameplay the client can't lie about.
-		</p>
+		<h1 id="scripter-name">&nbsp;</h1>
+		<div class="tags hero-tags" id="scripter-tags"></div>
+		<div class="tagline" id="scripter-description"></div>
+
 		<div class="hero-links">
 			<a class="btn btn-primary" href="#work">See the work</a>
-			<a class="btn" href="https://github.com/eliteremote12-web" target="_blank" rel="noopener">GitHub</a>
-			<a class="btn" href="https://discord.com/users/1162845700980228147" target="_blank" rel="noopener">Discord</a>
-			<a class="btn" href="mailto:eliteremote12@gmail.com">eliteremote12@gmail.com</a>
+			<span id="scripter-contact"></span>
 		</div>
 	</div>
 	<div class="hero-fade"></div>
@@ -46,7 +45,7 @@
 
 <footer class="footer">
 	<p>Built with static HTML, CSS and JavaScript. Hosted on GitHub Pages.</p>
-	<p class="footer-meta"><span id="year"></span> &middot; Elite_Remote</p>
+	<p class="footer-meta"><span id="year"></span> &middot; <span id="footer-name"></span></p>
 </footer>
 
 <div class="modal" id="modal" hidden>
